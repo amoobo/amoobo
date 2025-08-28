@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amoobo - Handcrafted Warmth</title>
+    <link rel="icon" href="amoobo_logo.jpg" type="image/jpeg">
     <style>
         /* CSS styling adjusted to Amoobo brand logo */
         body {
@@ -13,7 +14,7 @@
             color: #4A2B1A; /* Dark brown from logo */
             background-color: #F8F4ED; /* Warm cream/beige from logo */
         }
-        h1, h2, h3 {
+        h2, h3 {
             font-family: 'Helvetica', Arial, sans-serif;
             color: #4A2B1A; /* Dark brown */
         }
@@ -46,10 +47,10 @@
         .hero-banner .content {
             z-index: 1;
         }
-        .hero-banner h1 {
-            font-size: 3em;
+        .hero-banner .logo-img {
+            max-width: 300px; /* 調整商標圖片的最大寬度 */
+            height: auto;
             margin-bottom: 5px;
-            text-transform: uppercase;
         }
         .hero-banner p {
             font-size: 1.2em;
@@ -114,7 +115,7 @@
 
     <header class="hero-banner">
         <div class="content">
-            <h1>Amoobo</h1>
+            <img src="amoobo_logo.jpg" alt="Amoobo Logo" class="logo-img">
             <p>HANDMADE WARMTH</p>
             <a href="#products-section" class="cta-button">Explore Our Collection</a>
         </div>
