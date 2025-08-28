@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amoobo - Handcrafted Warmth</title>
-    <link rel="icon" href="amoobo_logo.jpg" type="image/jpeg">
-    <style>
-        /* CSS styling adjusted to Amoobo brand logo */
+    <link rel="icon" href="amoobo_logo.jpg" type="image/jpeg"> <style>
+        /* CSS styling adjusted for the new transparent logo */
         body {
             margin: 0;
             font-family: 'Helvetica', Arial, sans-serif;
             line-height: 1.6;
             color: #4A2B1A; /* Dark brown from logo */
-            background-color: #F8F4ED; /* Warm cream/beige from logo */
+            background-color: #f4f4f4; /* A neutral light grey background */
         }
         h2, h3 {
             font-family: 'Helvetica', Arial, sans-serif;
@@ -24,11 +23,12 @@
             padding: 20px;
         }
         .hero-banner {
-            background-image: url('https://via.placeholder.com/1920x800/F8F4ED/4A2B1A?text=Your+Warm+Brand+Image+Here'); /* Placeholder with logo colors */
+            background-image: url('https://via.placeholder.com/1920x800/dcdcdc/4A2B1A?text=Your+Brand+Image+Here'); /* A neutral placeholder image */
             background-size: cover;
             background-position: center;
             height: 800px;
             display: flex;
+            flex-direction: column; /* Allows content to stack vertically */
             justify-content: center;
             align-items: center;
             color: #F8F4ED; /* Light text color over dark overlay */
@@ -42,22 +42,26 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(74, 43, 26, 0.4); /* Dark brown overlay */
+            background-color: rgba(0, 0, 0, 0.4); /* Slightly darker overlay for contrast */
         }
         .hero-banner .content {
             z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .hero-banner .logo-img {
-            max-width: 300px; /* 調整商標圖片的最大寬度 */
+        .hero-banner .logo-text-img {
+            max-width: 400px; /* Adjust width as needed for your logo */
             height: auto;
-            margin-bottom: 5px;
-            border-radius: 50%; /* 新增的程式碼：讓圖片變成圓形 */
+            margin-bottom: 20px; /* Space between logo and slogan */
+            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3)); /* Add a subtle shadow to the logo */
         }
         .hero-banner p {
-            font-size: 1.2em;
-            letter-spacing: 2px;
+            font-size: 1.5em; /* Make slogan larger */
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin-top: 0;
+            font-weight: bold; /* Make slogan bold */
         }
         .cta-button {
             display: inline-block;
@@ -68,6 +72,7 @@
             border-radius: 5px;
             transition: background-color 0.3s;
             font-weight: bold;
+            margin-top: 30px; /* Space above the button */
         }
         .cta-button:hover {
             background-color: #EBC046;
@@ -80,7 +85,7 @@
             background-color: white;
         }
         .products {
-            background-color: #F9F4F2; /* Cream/off-white color from logo */
+            background-color: #F9F4F2; /* Cream/off-white color */
         }
         .product-grid {
             display: grid;
@@ -116,7 +121,7 @@
 
     <header class="hero-banner">
         <div class="content">
-            <img src="amoobo_logo.jpg" alt="Amoobo Logo" class="logo-img">
+            <img src="amoobo_logo.jpg" alt="Amoobo Logo" class="logo-text-img">
             <p>HANDMADE WARMTH</p>
             <a href="#products-section" class="cta-button">Explore Our Collection</a>
         </div>
@@ -161,4 +166,3 @@
 
 </body>
 </html>
-
