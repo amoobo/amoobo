@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fdf8f4;
+  color: #4a3f35;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4a3f35;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('hero.jpg') center/cover no-repeat;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.products .product-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contact button {
+  background-color: #a67c52;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #888;
+}

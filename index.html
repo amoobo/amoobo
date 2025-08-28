@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amoobo – Handmade Warmth</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdf8f4;
-      color: #4a3f35;
-    }
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    p.tagline {
-      font-size: 18px;
-      letter-spacing: 1px;
-      color: #a67c52;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Amoobo</h1>
-    <p class="tagline">HANDMADE WARMTH</p>
+    <nav>
+      <div class="logo">Amoobo</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <h1>Handmade Warmth</h1>
+      <p>Crafted with care in Calgary</p>
+    </section>
   </header>
 
-  <section>
-    <h2>Welcome to Amoobo</h2>
-    <p>
-      At Amoobo, we believe that warmth is more than just a feeling—it’s something you can hold, smell, and share. Based in Calgary, Canada, our handcrafted scented candles are lovingly made one by one, with care woven into every detail.
-    </p>
-    <p>
-      Each candle carries a unique fragrance designed to transform your space and evoke moments of comfort, joy, and serenity. Whether you're winding down after a long day or creating a cozy atmosphere for loved ones, Amoobo brings a touch of handmade warmth into your home.
-    </p>
-  </section>
+  <main>
+    <section id="about" class="about">
+      <h2>About Amoobo</h2>
+      <p>We believe warmth is something you can hold, smell, and share. Our handcrafted candles are made with love, one by one.</p>
+    </section>
+
+    <section id="products" class="products">
+      <h2>Our Candles</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="candle1.jpg" alt="Vanilla Candle">
+          <h3>Vanilla Calm</h3>
+          <p>Soft vanilla scent for cozy evenings.</p>
+        </div>
+        <div class="product-card">
+          <img src="candle2.jpg" alt="Lavender Candle">
+          <h3>Lavender Dream</h3>
+          <p>Relaxing lavender to soothe your soul.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/your-id" method="POST">
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    Contact us: <a href="mailto:info@amoobo.com">info@amoobo.com</a>
+    <p>&copy; 2025 Amoobo. All rights reserved.</p>
   </footer>
 </body>
 </html>
