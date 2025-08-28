@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amoobo - Handmade Warmth</title>
+    <title>Amoobo - Handcrafted Warmth</title>
     <link rel="icon" href="amoobo_icon.jpg" type="image/jpeg">
     <style>
         /* CSS styling adjusted for the new transparent logo */
@@ -125,13 +125,36 @@
             text-decoration: none;
             margin: 0 10px;
         }
+        
+        /* === MEDIA QUERIES FOR MOBILE RESPONSIVENESS === */
+        @media screen and (max-width: 600px) {
+            .hero-banner {
+                height: 500px;
+            }
+            .hero-banner .logo-text-img {
+                max-width: 90%; /* Logo scales to 90% of screen width */
+                margin-bottom: 15px;
+            }
+            .cta-button {
+                font-size: 0.9em;
+                padding: 12px 24px;
+                margin-top: 20px;
+            }
+            .coming-soon-text {
+                font-size: 1.5em;
+                padding: 30px 0 15px;
+            }
+            .stay-tuned-text {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header class="hero-banner">
         <div class="content">
-            <img src="amoobo_L.png" alt="Amoobo Logo" class="logo-text-img">
+            <img src="amoobo_logo.jpg" alt="Amoobo Logo" class="logo-text-img">
             <a href="#products-section" class="cta-button">Explore Our Collection</a>
         </div>
     </header>
@@ -157,9 +180,7 @@
             <p>&copy; 2025 Amoobo. All Rights Reserved.</p>
             <p>Contact us via | <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
         </div>
-    </section>
+    </footer>
 
 </body>
 </html>
-
-
