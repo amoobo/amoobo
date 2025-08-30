@@ -119,13 +119,18 @@ footer a {
 }
 
 /* === NEW STYLES FOR TEXT HIGHLIGHTING === */
-strong {
-    color: #B28F6F;
-}
-em {
-    color: #8A6044;
-    font-weight: normal; /* To prevent italic text from also being bold */
-}
+.risky-citrus-desc strong { color: #FFA500; } /* golden honey */
+.risky-citrus-desc em { color: #FFD700; }
+.oak-redcurrant-desc strong { color: #8B0000; } /* Red */
+.oak-redcurrant-desc em { color: #DC143C; }
+.antique-attic-desc strong { color: #A45A2F; } /* Cinnamon */
+.antique-attic-desc em { color: #D2691E; }
+.raspberry-vanilla-desc strong { color: #4B404D; } /* Taupe */
+.raspberry-vanilla-desc em { color: #9A8D9A; }
+.autumn-leaves-desc strong { color: #556B2F; } /* Olive */
+.autumn-leaves-desc em { color: #6B8E23; }
+.black-rose-desc strong { color: #800020; } /* Burgundy */
+.black-rose-desc em { color: #B22222; }
 
 /* === MEDIA QUERIES FOR MOBILE RESPONSIVENESS === */
 @media screen and (max-width: 600px) {
