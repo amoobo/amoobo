@@ -73,6 +73,7 @@ section {
 .products {
     background-color: #F9F4F2;
     position: relative;
+    padding-bottom: 80px; /* Add space for arrows on small screens */
 }
 
 /* === CAROUSEL & LAYOUT STYLES === */
@@ -127,7 +128,7 @@ section {
     z-index: 10;
     border-radius: 5px;
     user-select: none;
-    display: none;
+    display: none; /* Hidden by default on all screens */
 }
 .prev-btn { left: 0; }
 .next-btn { right: 0; }
@@ -388,23 +389,30 @@ footer a {
         padding: 12px 24px;
         margin-top: 20px;
     }
-    .coming-soon-text {
-        font-size: 1.5em;
-        padding: 30px 0 15px;
+    .products {
+        padding: 40px 0 60px; /* Adjust padding for mobile */
     }
-    .stay-tuned-text {
-        font-size: 1em;
-    }
-    .carousel-container {
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
+    .container {
+        padding: 0; /* Remove padding for full-width content */
     }
     .product-layout {
         flex-direction: column;
+        padding: 0; /* Remove padding */
+        box-shadow: none; /* Remove box shadow */
+    }
+    .product-item {
+        background-color: transparent; /* Remove product item background */
+    }
+    .product-image-side {
+        padding: 0; /* Remove padding */
     }
     .product-info-side {
         text-align: center;
+        padding: 20px;
+    }
+    .prev-btn, .next-btn {
+        display: block; /* Show arrows on small screens */
+        top: 80%; /* Position arrows below the product */
     }
     .modal-content {
         width: 95%; /* Make modal wider on small screens */
