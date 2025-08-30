@@ -14,7 +14,7 @@
             <img src="amoobo_L.png" alt="Amoobo Logo" class="logo-text-img">
             <a href="#products-section" class="cta-button">Explore Our Collection</a>
         </div>
-    </header>
+    </section>
 
     <section class="brand-story" id="about-us-section">
         <div class="container">
@@ -102,9 +102,9 @@
                         </div>
                     </div>
                 </div>
-                <button class="prev-btn">&#10094;</button>
-                <button class="next-btn">&#10095;</button>
             </div>
+            <button class="prev-btn">&#10094;</button>
+            <button class="next-btn">&#10095;</button>
         </div>
     </section>
 
@@ -116,25 +116,64 @@
     </footer>
 
     <script>
-        const carouselWrapper = document.querySelector('.carousel-wrapper');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselWrapper = document.querySelector('.carousel-wrapper');
+            const productItems = document.querySelectorAll('.product-item');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
 
-        let currentIndex = 0;
-        const totalItems = 6;
+            let currentIndex = 0;
+            const totalItems = productItems.length;
 
-        function updateCarousel() {
-            carouselWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+            // Clone first and last items for infinite loop effect
+            const firstItemClone = productItems[0].cloneNode(true);
+            const lastItemClone = productItems[totalItems - 1].cloneNode(true);
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalItems;
-            updateCarousel();
-        });
+            carouselWrapper.appendChild(firstItemClone);
+            carouselWrapper.insertBefore(lastItemClone, productItems[0]);
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-            updateCarousel();
+            // Set initial position to show the first original item
+            carouselWrapper.style.transform = `translateX(-${100}%)`;
+
+            let isTransitioning = false;
+
+            function updateCarousel(direction) {
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                if (direction === 'next') {
+                    currentIndex++;
+                } else {
+                    currentIndex--;
+                }
+
+                carouselWrapper.style.transition = 'transform 0.5s ease-in-out';
+                carouselWrapper.style.transform = `translateX(-${(currentIndex + 1) * 100}%)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                updateCarousel('next');
+            });
+
+            prevBtn.addEventListener('click', () => {
+                updateCarousel('prev');
+            });
+
+            carouselWrapper.addEventListener('transitionend', () => {
+                isTransitioning = false;
+
+                // Handle the seamless loop
+                if (currentIndex === totalItems) {
+                    carouselWrapper.style.transition = 'none';
+                    currentIndex = 0;
+                    carouselWrapper.style.transform = `translateX(-${(currentIndex + 1) * 100}%)`;
+                }
+                if (currentIndex === -1) {
+                    carouselWrapper.style.transition = 'none';
+                    currentIndex = totalItems - 1;
+                    carouselWrapper.style.transform = `translateX(-${(currentIndex + 1) * 100}%)`;
+                }
+            });
         });
     </script>
 
