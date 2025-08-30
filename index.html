@@ -103,9 +103,9 @@
                     </div>
                 </div>
             </div>
-            <button class="prev-btn">&#10094;</button>
-            <button class="next-btn">&#10095;</button>
         </div>
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
     </section>
 
     <footer>
@@ -169,4 +169,13 @@
                     carouselWrapper.style.transform = `translateX(-${(currentIndex + 1) * 100}%)`;
                 }
                 if (currentIndex === -1) {
-                    carouselWrapper.style.
+                    carouselWrapper.style.transition = 'none';
+                    currentIndex = totalItems - 1;
+                    carouselWrapper.style.transform = `translateX(-${(currentIndex + 1) * 100}%)`;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
