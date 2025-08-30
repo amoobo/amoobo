@@ -72,21 +72,21 @@ section {
 }
 .products {
     background-color: #F9F4F2;
+    position: relative; /* Make it a positioning context for the arrows */
 }
 
 /* === NEW CAROUSEL & LAYOUT STYLES === */
 .carousel-container {
     position: relative;
-    max-width: 900px; /* Adjusted for wider layout */
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
 }
 .carousel-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out;
 }
 .product-item {
-    flex: 0 0 100%; /* Each item takes up 100% of the container width */
+    flex: 0 0 100%;
     background-color: white;
     box-sizing: border-box;
 }
