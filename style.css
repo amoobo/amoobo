@@ -72,10 +72,10 @@ section {
 }
 .products {
     background-color: #F9F4F2;
-    position: relative; /* Make it a positioning context for the arrows */
+    position: relative; /* Set position to relative for arrows to be centered within this section */
 }
 
-/* === NEW CAROUSEL & LAYOUT STYLES === */
+/* === CAROUSEL & LAYOUT STYLES === */
 .carousel-container {
     position: relative;
     max-width: 900px;
@@ -84,6 +84,7 @@ section {
 }
 .carousel-wrapper {
     display: flex;
+    /* transition is added dynamically by JS for infinite loop */
 }
 .product-item {
     flex: 0 0 100%;
@@ -112,6 +113,8 @@ section {
     padding: 10px;
     text-align: left;
 }
+
+/* Arrow styles */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
@@ -125,9 +128,18 @@ section {
     z-index: 10;
     border-radius: 5px;
     user-select: none;
+    display: none; /* Hide by default, show only in desktop view */
 }
 .prev-btn { left: 0; }
 .next-btn { right: 0; }
+
+/* Always show arrows in wider screens */
+@media screen and (min-width: 601px) {
+    .prev-btn, .next-btn {
+        display: block;
+    }
+}
+
 
 /* === OTHER STYLES === */
 .coming-soon-text {
