@@ -119,8 +119,8 @@ footer a {
 }
 
 /* === NEW STYLES FOR TEXT HIGHLIGHTING === */
-.risky-citrus-desc strong { color: #FFA500; } /* golden honey */
-.risky-citrus-desc em { color: #FFD700; }
+.risky-citrus-desc strong { color: #CC8800; } /* Adjusted golden honey for better contrast */
+.risky-citrus-desc em { color: #EBC046; } /* Adjusted light color for better contrast */
 .oak-redcurrant-desc strong { color: #8B0000; } /* Red */
 .oak-redcurrant-desc em { color: #DC143C; }
 .antique-attic-desc strong { color: #A45A2F; } /* Cinnamon */
